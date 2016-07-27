@@ -192,7 +192,7 @@ module Brcobranca
           doc.text_in :write => "Linha Digitável: #{boleto.codigo_barras.linha_digitavel}",       :x => "1 cm",    :y => "23.3 cm",   :tag => :comprovante
           doc.text_in :write => "Valor: #{boleto.especie} #{boleto.valor_documento.to_currency}", :x => "1 cm",    :y => "22.8 cm", :tag => :comprovante 
           doc.text_in :write => "Total de Requerimentos: #{boleto.total_rps}",                    :x => "6 cm",    :y => "22.8 cm", :tag => :comprovante 
-          doc.text_in :write => "Validade: #{boleto.data_vencimento}",                            :x => "6 cm",    :y => "22.3 cm", :tag => :comprovante 
+          doc.text_in :write => "Validade: #{boleto.data_vencimento}",                            :x => "1 cm",    :y => "22.3 cm", :tag => :comprovante 
           # ORIGEM: CAPITAL
           # PLACA: HXH0000
 

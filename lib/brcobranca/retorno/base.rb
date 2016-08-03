@@ -50,6 +50,7 @@ module Brcobranca
       attr_accessor :valor
       attr_accessor :valor_crdd
       attr_accessor :id_ocorrencia
+      attr_accessor :motivo_ocorrencia
     end
   end
 end

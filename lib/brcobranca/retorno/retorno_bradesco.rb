@@ -33,6 +33,7 @@ module Brcobranca
           parse.field :mes_pagamento, 112..113
           parse.field :ano_pagamento, 114..116
           parse.field :id_ocorrencia, 108..109
+          parse.field :motivo_ocorrencia, 318..327
           parse.field :valor, 253..265
         end
       end

@@ -168,7 +168,7 @@ module Brcobranca
         # Monta o cabeçalho do layout do boleto
         def modelo_mondrian_cabecalho(doc, boleto, opts = {:logo => 80})
           instrucoes = [
-            "Instruções",
+            "LISTAGEM DE RPS's",
             boleto.instrucao7[0..110],
             boleto.instrucao7[111..220],
             boleto.instrucao7[221..330],

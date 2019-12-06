@@ -169,7 +169,12 @@ module Brcobranca
         def modelo_mondrian_cabecalho(doc, boleto, opts = {:logo => 80})
           instrucoes = [
             "Instruções",
-            boleto.instrucao7
+            boleto.instrucao7[0..120],
+            boleto.instrucao7[121..240],
+            boleto.instrucao7[241..240],
+            boleto.instrucao7[361..480],
+            boleto.instrucao7[481..600],
+            boleto.instrucao7[601..720]
           ]
 #           instrucoes = [
 #             "Instruções",

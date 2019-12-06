@@ -168,7 +168,7 @@ module Brcobranca
         # Monta o cabeçalho do layout do boleto
         def modelo_mondrian_cabecalho(doc, boleto, opts = {:logo => 80})
           instrucoes = [
-            "Instruções",
+            "LISTAGEM DE RPS's",
             boleto.instrucao7[0..120],
             boleto.instrucao7[121..240],
             boleto.instrucao7[241..360],
@@ -188,15 +188,15 @@ module Brcobranca
 #             "- Caso tenha problemas ao imprimir, copie a sequencia numérica abaixo e pague no caixa eletrônico ou internet banking:"
 #           ]
 
-          doc.text_in :write => instrucoes[0], :x => "9 cm", :y => "28 cm"  , :tag => :negrito  
-          doc.text_in :write => instrucoes[1], :x => "1 cm", :y => "27.4 cm", :tag => :negrito    
-          doc.text_in :write => instrucoes[2], :x => "1 cm", :y => "26.9 cm", :tag => :negrito    
-          doc.text_in :write => instrucoes[3], :x => "1 cm", :y => "26.4 cm", :tag => :negrito    
-          doc.text_in :write => instrucoes[4], :x => "1 cm", :y => "25.9 cm", :tag => :negrito    
-          doc.text_in :write => instrucoes[5], :x => "1 cm", :y => "25.4 cm", :tag => :negrito
-          doc.text_in :write => instrucoes[6], :x => "1 cm", :y => "25 cm", :tag => :negrito
-          doc.text_in :write => instrucoes[7], :x => "1 cm", :y => "24.6 cm", :tag => :negrito
-          doc.text_in :write => instrucoes[8], :x => "1 cm", :y => "24.1 cm", :tag => :negrito    
+          doc.text_in :write => instrucoes[0], :x => "9 cm", :y => "28 cm"  , :tag => :comprovante  
+          doc.text_in :write => instrucoes[1], :x => "1 cm", :y => "27.4 cm", :tag => :comprovante    
+          doc.text_in :write => instrucoes[2], :x => "1 cm", :y => "26.9 cm", :tag => :comprovante    
+          doc.text_in :write => instrucoes[3], :x => "1 cm", :y => "26.4 cm", :tag => :comprovante    
+          doc.text_in :write => instrucoes[4], :x => "1 cm", :y => "25.9 cm", :tag => :comprovante    
+          doc.text_in :write => instrucoes[5], :x => "1 cm", :y => "25.4 cm", :tag => :comprovante
+          doc.text_in :write => instrucoes[6], :x => "1 cm", :y => "25 cm", :tag => :comprovante
+          doc.text_in :write => instrucoes[7], :x => "1 cm", :y => "24.6 cm", :tag => :comprovante
+          doc.text_in :write => instrucoes[8], :x => "1 cm", :y => "24.1 cm", :tag => :comprovante    
 
           doc.text_in :write => "Linha Digitável: #{boleto.codigo_barras.linha_digitavel}",       :x => "1 cm",    :y => "23.3 cm",   :tag => :comprovante
           doc.text_in :write => "Valor: #{boleto.especie} #{boleto.valor_documento.to_currency}", :x => "1 cm",    :y => "22.8 cm", :tag => :comprovante 
